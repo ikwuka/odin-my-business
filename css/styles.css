@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+.component,
+.component::after,
+.component::before,
+.component *
+.component *::afer,
+.component *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #1F2937;
+}
+
+footer {
+  background: #1F2937;
+}
