@@ -1,5 +1,18 @@
 @import url(../css/fonts.css);
 
+:root {
+  /* Font families */
+  --Josefin: 'Josefin', Helvetica, Verdana, 'Times New Roman', Georgia, sans-serif;
+  --Lexend: 'Lexend', Helvetica, Verdana, 'Times New Roman', Georgia, sans-serif;
+  --Livvic: 'Livvic', Helvetica, Verdana, 'Times New Roman', Georgia, sans-serif;
+  /* Font colors */
+  --blue: #1DA1FF;
+}
+
+* {
+  font-family: var(--Josefin);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -22,6 +35,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--blue);
 }
 
 ul {
@@ -30,15 +44,28 @@ ul {
 }
 /* ..x.. Global rules ..x.. */
 
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.container .box {
+  flex: 1 1 auto;
+}
+
 header {
   background: #1F2937;
-  padding: 0 0 20px;
+  font-family: var(--Lexend);
+  font-weight: bold;
+  padding: .2rem;
 }
 
 footer {
   background: #1F2937;
   font-weight: bold;
+  font-family: var(--Lexend);
   text-align: center;
   color: rgb(255, 255, 255);
-  padding: 10px;
+  margin: 0;
+  padding: .2rem;
 }

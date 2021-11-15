@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Odin My Business (OMB) is a business-to-business (B2B) company that offers outstanding professional services to businesses in diverse industries." />
     <meta name="author" content="Arinzechukwu Okoye" />
-    <title>Branding Made Fun | OMB</title>
+    <title>Branding Made Fun | OdinMyBusiness</title>
 
     <!-- Favicon packages -->
     <link rel=icon type="image/x-ico" href="./favicon.ico" />
@@ -23,38 +23,100 @@
   </head>
 
   <body>
-    <div class="container">
-      <header>
+    <header class="header">
+      <div class="head-box">
         <nav>
           <div class="left">
             <ul>
-              <li class="links"><a href="#">OdinMyBusiness</a></li>
+              <li class="links"><a href="./index.html"><img src="./img/logo.svg" alt="Odin My Business logo" width="25px" height="auto"/>OdinMyBusiness</a></li>
             </ul>
           </div>
           <div class="right">
             <ul>
-              <li class="links"><a href="#">Finance</a></li>
-              <li class="links"><a href="#">Marketing</a></li>
-              <li class="links"><a href="#">Investment</a></li>
+              <li class="links"><a href="#Finance">Finance</a></li>
+              <li class="links"><a href="#Marketing">Marketing</a></li>
+              <li class="links"><a href="#Investment">Investment</a></li>
             </ul>
           </div>
         </nav>
-      </header>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="box">
+          <section>
+            <h1>Corporate Growth Hackers</h1>
+            <h3>Ready to record your first ever most profitable quarter(s)!?</h3>
+            <p>With utmost enthusiasm, we assure that our products brings immeasurable ecstasy; adding to our outstanding corporate services.</p>
+            <button type="button" name="account-creation" value="sign-up">Sign up</button>
+          </section>
+          
+          <aside>
+            <figure>
+              <img class="first" src="./img/marketer.jpg" alt="OMB Marketer" height="auto" width="500px" />
+              <figcaption><i>Image credit</i> to Andrea Piacquadio &mdash; <a href="https://www.pexels.com">Pexels</a></figcaption>
+            </figure>
+          </aside>
+        </div>
   
-      <main>
-        <section>
+        <div class="box-1">
+          <h2>Lists of our spectacular services</h2>
+          <div class="box-3-img">
+            <figure class="second">
+              <img src="./img/services/adwords.jpg" alt="OMB Adwords Service" height="auto" width="100px" />
+              <figcaption><i>Pixabay GmbH &mdash; <a href="https://www.pexels.com">Pexels</a></figcaption>
+            </figure>
+            <figure class="third">
+              <img src="./img/services/blog.jpg" alt="OMB Blogging Service" height="auto" width="100px" />
+              <figcaption><i>Pixabay GmbH &mdash; <a href="https://www.pexels.com">Pexels</a></figcaption>
+            </figure>
+            <figure class="fourth">
+              <img src="./img/services/seo.jpg" alt="OMB Search Engine Optimization (SEO) Service" height="auto" width="100px" />
+              <figcaption><i>Pixabay GmbH &mdash; <a href="https://www.pexels.com">Pexels</a></figcaption>
+            </figure>
+            <figure class="fifth">
+              <img src="./img/services/seo-audit.jpg" alt="OMB SEO Auditing Service" height="auto" width="100px" />
+              <figcaption><i>Pixabay GmbH &mdash; <a href="https://www.pexels.com">Pexels</a></figcaption>
+            </figure>
+          </div>
+        </div><br/>
   
-        </section>
-        
-        <aside>
+        <div class="box-2">
+          <figure class="quote">
+            <q>We could not have <b>won</b> the hearts of our customers the more than with the help of <em>Odin My Business (OMB)</em>. 
+                When we strategized on redesigning our organization and overall profitability goal, data suggests our company 
+                must partner with an industry leader, and we have been pleased with the exceptionalism of OMB team(s).</q>
+                <figcaption>
+                  &mdash; Dr. Better Pro, VP of Marketing at <cite>Googool</cite>
+                </figcaption>
+          </figure>
+        </div><br/>
   
-        </aside>
-      </main>
+        <div class="box-3">
+          <div class="action-call">
+            <h3>Sign up for continuous update on our pace-setting products!</h3>
+            <p>To recieve long-term support, vital update lists, and industry-specific newsletters, please fill in the forms below:</p>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Arinze John" maxlength="25" minlength="10" required>
   
-      <footer>
-        <h5><small>Copyright &copy; 2021 OdinMyBusiness. All rights reserved</small></h5>
-      </footer>
-    </div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="company@domain.com" required>
+  
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="How could we be of most value to your organization?" maxlength="200" cols="30" rows="5" required></textarea>
+  
+              <button id="newsletter" name="newsletter-req" value="send">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h5>&copy; 2021 OdinMyBusiness</h5>
+    </footer>  
   </body>
 
-</html>
+  </html>
