@@ -9,10 +9,8 @@
   --blue: #1DA1FF;
 }
 
-* {
-  font-family: var(--Josefin);
-}
 
+/* .... Global styles .... */
 html {
   box-sizing: border-box;
 }
@@ -24,13 +22,11 @@ html {
 .component *::afer,
 .component *::before {
   box-sizing: inherit;
+  margin: 0 auto;
 }
 
-/* .... Global rules .... */
 body {
-  background: #FFF;
-  color: rgb(0, 0, 0);
-  margin: 0 auto;
+  font-family: var(--Josefin);
 }
 
 a {
@@ -40,32 +36,61 @@ a {
 
 ul {
   list-style: none;
-  display: inline-flex;
 }
-/* ..x.. Global rules ..x.. */
+/* ..x.. Global styles ..x.. */
 
-.container {
+
+/* .... Navigation .... */
+.navigation {
   display: flex;
-  flex-flow: row nowrap;
-}
-
-.container .box {
-  flex: 1 1 auto;
-}
-
-header {
+  justify-content: flex-end;
   background: #1F2937;
   font-family: var(--Lexend);
-  font-weight: bold;
-  padding: .2rem;
+  font-weight: bolder;
+  margin: 0 -10px;
+  padding: 1.5rem;
+  gap: 10px;
 }
 
+.navigation li {
+  margin: 0 10px;
+}
+
+.navigation li.left {
+  margin-right: auto;
+  align-self: flex-start;
+
+}
+.navigation a {
+  color: #FFF;
+}
+
+.navigation a.brand {
+  color: var(--blue);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.navigation a:hover {
+  color: rgb(255, 0, 0);
+}
+/* ..x.. Navigation ..x.. */
+
+.wrapper {
+  display: flex;
+}
+
+wrapper input[type="email"] {
+  flex: 1 1 auto;
+}
+/* .... Footer .... */
 footer {
   background: #1F2937;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: var(--Lexend);
   text-align: center;
   color: rgb(255, 255, 255);
   margin: 0;
   padding: .2rem;
 }
+/* ..x.. Footer ..x.. */
