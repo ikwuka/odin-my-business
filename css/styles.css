@@ -7,10 +7,13 @@
   --Livvic: 'Livvic', Helvetica, Verdana, 'Times New Roman', Georgia, sans-serif;
   /* Font colors */
   --blue: #1DA1FF;
+  --heroFooter-quoteInfo-: #1F2937;
+  --mainLogo: #F9FAF8;
+  --button-background: #3882F6;
+  --heroSecondary: #E5E7EB;
 }
 
-
-/* .... Global styles .... */
+/* Global rules */
 html {
   box-sizing: border-box;
 }
@@ -37,16 +40,14 @@ a {
 ul {
   list-style: none;
 }
-/* ..x.. Global styles ..x.. */
 
-
-/* .... Navigation .... */
+/* Navigation */
 .navigation {
   display: flex;
   justify-content: flex-end;
   background: #1F2937;
   font-family: var(--Lexend);
-  font-weight: bold;
+  font-weight: normal;
   margin: 0 -10px;
   padding: 1.5rem;
   gap: 10px;
@@ -59,22 +60,22 @@ ul {
 .navigation li.left {
   margin-right: auto;
   align-self: flex-start;
-
 }
+
 .navigation a {
-  color: #FFF;
+  font-size: 18px;
+  color: var(--heroSecondary);
 }
 
 .navigation a.brand {
-  color: var(--blue);
-  font-size: 20px;
+  color: var(--mainLogo);
+  font-size: 24px;
   margin-right: 10px;
 }
 
 .navigation a:hover {
   color: rgb(255, 0, 0);
 }
-/* ..x.. Navigation ..x.. */
 
 .wrapper {
   display: flex;
@@ -83,7 +84,7 @@ ul {
 wrapper input[type="email"] {
   flex: 1 1 auto;
 }
-/* .... Footer .... */
+/* Footer */
 footer {
   background: #1F2937;
   font-weight: bolder;
@@ -93,4 +94,3 @@ footer {
   margin: 0;
   padding: .2rem;
 }
-/* ..x.. Footer ..x.. */
