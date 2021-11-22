@@ -13,6 +13,7 @@
   --heroSecondary: #E5E7EB;
 }
 
+
 /* Global rules */
 html {
   box-sizing: border-box;
@@ -44,7 +45,7 @@ ul {
 button {
   background: var(--button-ctaBackground);
   color: var(--mainLogo);
-  border: 2px solid #000;
+  border: 3px solid #F00;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
@@ -57,6 +58,7 @@ button:hover {
   font-weight: bolder;
   border: 2px solid var(--blue);
 }
+
 
 /* Navigation */
 .navigation {
@@ -99,15 +101,6 @@ button:hover {
   font-weight: bold;
 }
 
-/*
-.container {
-  max-width: 90%;
-  border: 5px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
 
 /* Hero content */
 .box {
@@ -147,17 +140,55 @@ box #div {
 
 .box aside {
   align-self: flex-end;
-  margin-right: -40px;
   flex: auto;
 }
 
 .box aside img {
-  height: 280px; 
-  width: 500px;
-  border: 2px solid var(--blue);
-  margin-top: 100px;
-  border-radius: 5px;
+  height: 300px; 
+  width: 600px;
+  border: 3px solid var(--button-ctaBackground);
+  border-radius: 10px;
 }
+
+
+/* Information section */
+#info {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: var(--Lexend);
+  color: var(--heroFooter-quoteInfo-);
+  padding: 50px 0 0;
+}
+
+.core-services {
+  display: flex;
+  height: 300px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 55px;
+}
+
+.core-services img {
+  width: 150px;
+  height: auto;
+  border: 3px solid var(--button-ctaBackground);
+  border-radius: 10px;
+}
+
+.core-services img:hover {
+  width: 170px;
+  height: auto;
+  border: 5px solid #F00;
+}
+
+.core-services .text {
+  max-width: 200px;
+  color: var(--heroFooter-quoteInfo-);
+}
+
 
 .wrapper {
   display: flex;
