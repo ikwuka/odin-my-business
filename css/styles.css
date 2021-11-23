@@ -19,6 +19,7 @@ html {
   box-sizing: border-box;
 }
 
+*,
 .component,
 .component::after,
 .component::before,
@@ -45,7 +46,7 @@ ul {
 button {
   background: var(--button-ctaBackground);
   color: var(--mainLogo);
-  border: 3px solid var(--blue);
+  border: 3px solid var(--mainLogo);
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
@@ -221,15 +222,45 @@ box #div {
 /* Call to action section */
 .wrapper {
   display: flex;
-  height: 200px;
+  height: 180px;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 60px;
 }
 
-wrapper input[type="email"] {
+.wrapper .wrapper-child {
+  background: var(--button-ctaBackground);
+  padding: 20px 40px;
+  border-radius: 10px;
   flex: 1 1 auto;
+  max-width: 800px;
 }
+
+.wrapper h3 {
+  font-family: var(--Lexend);
+  font-size: 20px;
+  color: var(--mainLogo);
+  font-weight: bold;
+}
+
+.wrapper p {
+  color: var(--heroFooter-quoteInfo-);
+}
+
+.wrapper input[type="email"] {
+  flex: 1 1 auto;
+  padding: 10px;
+  width: 440px;
+  border: 2px solid var(--heroFooter-quoteInfo-);
+  border-radius: 5px;
+}
+
+#btn {
+  border: 2px solid var(--mainLogo);
+  padding: 10px;
+  border-radius: 5px;
+}
+
 
 /* Footer */
 .footer {
@@ -244,7 +275,17 @@ wrapper input[type="email"] {
 
 .footer div {
   color: var(--heroSecondary-quoteSection);
-  font-weight: bolder;
   font-family: var(--Lexend);
   flex: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .credit {
+  padding-bottom: 30px;
+}
+
+footer .trademark {
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
 }
