@@ -15,23 +15,15 @@
 
 
 /* Global rules */
-html {
+* {
   box-sizing: border-box;
 }
 
-*,
-.component,
-.component::after,
-.component::before,
-.component *
-.component *::afer,
-.component *::before {
-  box-sizing: inherit;
-}
-
 body {
+  box-sizing: inherit;
+  font-size: 18px;
   font-family: var(--Josefin);
-  margin: 0;
+  margin: 0 auto;
 }
 
 a {
@@ -46,7 +38,7 @@ ul {
 button {
   background: var(--button-ctaBackground);
   color: var(--mainLogo);
-  border: 3px solid var(--mainLogo);
+  border: 3px solid var(--blue);
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
@@ -114,7 +106,6 @@ button:hover {
   max-width: 100%;
   margin: 0 auto;
   padding: 50px;
-  gap: 0;
 }
 
 box #div {
