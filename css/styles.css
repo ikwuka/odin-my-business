@@ -186,7 +186,7 @@ box #div {
 .quote-box {
   display: flex;
   background: var(--heroSecondary-quoteSection);
-  height: 300px;
+  height: 500px;
   padding: 50px;
   justify-content: center;
   align-items: center;
@@ -213,7 +213,8 @@ box #div {
 /* Call to action section */
 .wrapper {
   display: flex;
-  height: 180px;
+  height: 400px;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   padding: 60px;
@@ -221,7 +222,8 @@ box #div {
 
 .wrapper .wrapper-child {
   background: var(--button-ctaBackground);
-  padding: 20px 40px;
+  padding: 40px;
+  align-items: center;
   border-radius: 10px;
   flex: 1 1 auto;
   max-width: 800px;
@@ -232,10 +234,11 @@ box #div {
   font-size: 20px;
   color: var(--mainLogo);
   font-weight: bold;
+  text-align: center;
 }
 
 .wrapper p {
-  color: var(--heroFooter-quoteInfo-);
+  color: #808080;
 }
 
 .wrapper input[type="email"] {
@@ -254,29 +257,28 @@ box #div {
 
 
 /* Footer */
-.footer {
+.footnav {
   display: flex;
+  width: 100%;
   flex-flow: row nowrap;
   background: #1F2937;
   justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: .5rem;
+  padding: 20px;
 }
 
-.footer div {
+.footnav div {
   color: var(--heroSecondary-quoteSection);
   font-family: var(--Lexend);
+  font-weight: bold;
+  color: var(--heroSecondary-quoteSection);
+  align-self: center;
   flex: auto;
-  padding: 10px;
+}
+
+.footnav div span {
+  color: #FFF;
+}
+
+.footnav div p {
   text-align: center;
-}
-
-footer .credit {
-  padding-bottom: 30px;
-}
-
-footer .trademark {
-  font-weight: bolder;
-  color: rgb(255, 255, 255);
 }
