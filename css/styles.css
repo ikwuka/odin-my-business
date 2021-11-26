@@ -15,12 +15,19 @@
 
 
 /* Global rules */
-* {
+html, 
+body {
+  margin: 0%;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: inherit;
 }
 
 body {
-  box-sizing: inherit;
+  font-size: 18px;
   font-family: var(--Josefin);
   margin: 0 auto;
 }
@@ -56,11 +63,10 @@ button:hover {
 .navigation {
   display: flex;
   justify-content: flex-end;
-  flex-flow: row wrap;
   background: #1F2937;
   font-family: var(--Lexend);
   font-weight: normal;
-  margin: 0;
+  margin: 0 -10px;
   padding: 50px;
   gap: 10px;
 }
@@ -75,8 +81,6 @@ button:hover {
 }
 
 .navigation a {
-  display: block;
-  padding: 1em;
   font-size: 18px;
   color: var(--heroSecondary-quoteSection);
 }
@@ -105,47 +109,49 @@ button:hover {
   flex-flow: row wrap;
   background: var(--heroFooter-quoteInfo-);
   color: #FFF;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 50px;
 }
 
-.box > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.box #section {
-  max-width: 50%;
-  margin-right: 220px;
-  align-self: flex-start;
-  flex: auto;
-}
-
-.box #section h1 {
+.box h1 {
   font: 48px bolder;
   color: var(--mainLogo);
   font-family: var(--Lexend);
 }
 
-.box #section p {
+.box p {
   font-size: 18px;
   color: var(--heroSecondary);
 }
 
+.box .section {
+  align-self: flex-start;
+  width: 45%;
+  max-width: 50%;
+  flex: auto;
+}
+
 .box .aside {
-  max-width: 30%;
-  float: left;
+  width: auto;
+  width: 35%;
+  max-width: 40%;
+  flex: auto;
 }
 
 .box .aside img {
-  width: 350px;
-  max-width: 700px;
-  height: auto;
-  border: 2px solid var(--blue);
+  height: 200px; 
+  width: 450px;
+  align-self: auto;
+  border: 3px solid var(--button-ctaBackground);
   border-radius: 10px;
+  align-self: flex-end;
+  margin-bottom: -80px;
 }
 
+.box .aside img:hover {
+  border: 5px solid #F00;
+}
 
 /* Information section */
 #info {
@@ -159,7 +165,7 @@ button:hover {
 
 .core-services {
   display: flex;
-  height: 300px;
+  height: 400px;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -190,7 +196,7 @@ button:hover {
 .quote-box {
   display: flex;
   background: var(--heroSecondary-quoteSection);
-  height: 500px;
+  height: 600px;
   padding: 50px;
   justify-content: center;
   align-items: center;
@@ -217,7 +223,7 @@ button:hover {
 /* Call to action section */
 .wrapper {
   display: flex;
-  height: 400px;
+  height: 450px;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
@@ -226,7 +232,7 @@ button:hover {
 
 .wrapper .wrapper-child {
   background: var(--button-ctaBackground);
-  padding: 40px;
+  padding: 30px;
   align-items: center;
   border-radius: 10px;
   flex: 1 1 auto;
@@ -242,7 +248,7 @@ button:hover {
 }
 
 .wrapper p {
-  color: #808080;
+  color: #000;
 }
 
 .wrapper input[type="email"] {
@@ -273,8 +279,6 @@ button:hover {
 .footnav div {
   color: var(--heroSecondary-quoteSection);
   font-family: var(--Livvic);
-  font-weight: bold;
-  color: var(--heroSecondary-quoteSection);
   align-self: center;
   flex: auto;
 }
@@ -327,26 +331,7 @@ button:hover {
   .col-s-12 {width: 100%;}
 }
 
-/* Navigation */
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  
-  .navigation a {
-    text-align: center;
-    padding: 10px;
-  }
-}
-
-/* Image */
+/* Responsive image */
 @media only screen and (min-device-width: 400px) {
   img {
     display: block;
@@ -356,18 +341,4 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-/* Mobile centric */
-@media all and (min-width: 600px) {
-  .aside {
-    flex: 1 0 0;
-  }
-}
-
-@media all and (min-width: 800px) {
-  .navigation {order: 1;}
-  #section {order: 2;}
-  .aside {order: 3}
-  .footnav {order: 4;}
 }
