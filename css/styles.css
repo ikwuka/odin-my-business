@@ -21,7 +21,6 @@
 
 body {
   box-sizing: inherit;
-  font-size: 18px;
   font-family: var(--Josefin);
   margin: 0 auto;
 }
@@ -57,10 +56,11 @@ button:hover {
 .navigation {
   display: flex;
   justify-content: flex-end;
+  flex-flow: row wrap;
   background: #1F2937;
   font-family: var(--Lexend);
   font-weight: normal;
-  margin: 0 -10px;
+  margin: 0;
   padding: 50px;
   gap: 10px;
 }
@@ -75,6 +75,8 @@ button:hover {
 }
 
 .navigation a {
+  display: block;
+  padding: 1em;
   font-size: 18px;
   color: var(--heroSecondary-quoteSection);
 }
@@ -98,9 +100,9 @@ button:hover {
 /* Hero content */
 .box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   background: var(--heroFooter-quoteInfo-);
   color: #FFF;
   max-width: 100%;
@@ -108,37 +110,39 @@ button:hover {
   padding: 50px;
 }
 
-box #div {
-  height: 500px;
-  width: 500px;
+.box > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
-.box h1 {
+.box #section {
+  max-width: 50%;
+  margin-right: 220px;
+  align-self: flex-start;
+  flex: auto;
+}
+
+.box #section h1 {
   font: 48px bolder;
   color: var(--mainLogo);
   font-family: var(--Lexend);
 }
 
-.box p {
+.box #section p {
   font-size: 18px;
   color: var(--heroSecondary);
 }
 
-.box section {
-  align-self: flex-start;
-  width: 85%;
-  flex: auto;
+.box .aside {
+  max-width: 30%;
+  float: left;
 }
 
-.box aside {
-  align-self: flex-end;
-  flex: auto;
-}
-
-.box aside img {
-  height: 300px; 
-  width: 600px;
-  border: 3px solid var(--button-ctaBackground);
+.box .aside img {
+  width: 350px;
+  max-width: 700px;
+  height: auto;
+  border: 2px solid var(--blue);
   border-radius: 10px;
 }
 
@@ -160,7 +164,7 @@ box #div {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 60px;
+  gap: 50px;
 }
 
 .core-services img {
@@ -268,7 +272,7 @@ box #div {
 
 .footnav div {
   color: var(--heroSecondary-quoteSection);
-  font-family: var(--Lexend);
+  font-family: var(--Livvic);
   font-weight: bold;
   color: var(--heroSecondary-quoteSection);
   align-self: center;
@@ -293,32 +297,77 @@ box #div {
 
 /* Tablet */
 @media only screen and (min-width: 600px) {
-  .col-s-1 {width:8.33%;}
-  .col-s-2 {width:16.66%;}
-  .col-s-3 {width:25%;}
-  .col-s-4 {width:33.33%;}
-  .col-s-5 {width:41.66%;}
-  .col-s-6 {width:50%;}
-  .col-s-7 {width:58.33%;}
-  .col-s-8 {width:66.66%;}
-  .col-s-9 {width:75%;}
-  .col-s-10 {width:83.33%;}
-  .col-s-11 {width:91.66%;}
-  .col-s-12 {width:100%;}
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
 }
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
-  .col-s-1 {width:8.33%;}
-  .col-s-2 {width:16.66%;}
-  .col-s-3 {width:25%;}
-  .col-s-4 {width:33.33%;}
-  .col-s-5 {width:41.66%;}
-  .col-s-6 {width:50%;}
-  .col-s-7 {width:58.33%;}
-  .col-s-8 {width:66.66%;}
-  .col-s-9 {width:75%;}
-  .col-s-10 {width:83.33%;}
-  .col-s-11 {width:91.66%;}
-  .col-s-12 {width:100%;}
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+/* Navigation */
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Image */
+@media only screen and (min-device-width: 400px) {
+  img {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile centric */
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 0 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .navigation {order: 1;}
+  #section {order: 2;}
+  .aside {order: 3}
+  .footnav {order: 4;}
 }
